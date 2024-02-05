@@ -1,0 +1,26 @@
+﻿# app.yaml
+
+# 种子客户端配置
+TorrentClient:
+  # 客户端类型 0 None 1 qBittorrent 2 Tranmission （默认为Tranmission）
+  ClientType: 2
+  # 地址，Tranmission应该携带transmission/rpc
+  Url: http://127.0.0.1:123456/transmission/rpc
+  # 用户名
+  UserName: your_username
+  # 密码
+  Password: your_password
+  # Tracers，Limit根据SiteName进行匹配，如果匹配不到，则根据Host匹配
+  Trackers:
+    # SiteName
+    - SiteName: a
+      # Host
+      Host: a.net
+      # maximum upload speed (KBps)
+      UploadLimit: 1000
+      # true if uploadLimit is honored
+      UploadLimited: false
+    - SiteName: b
+      Host: b.org
+      UploadLimit: 1000
+      UploadLimited: false
